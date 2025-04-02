@@ -23,7 +23,7 @@ PROJECTS = [
     {
         "title": "Smart Attendance and Time Tracking System in the Classroom Based on Facial Recognition and Actions",
         "description": "Created a facial recognition attendance system with 95% accuracy at Smart Attendance System (03/2020 - 09/2021)",
-        "tools": "Flask, Angular, Deep Learning, Annaconda,..",
+        "tools": "Python(Flask), Angular, Deep Learning, Annaconda,..",
         "image": "https://via.placeholder.com/300x200?text=Attendance",
         "achievement": "Achieved 98% accuracy for 65 users with optimized real-time erformance."
     },
