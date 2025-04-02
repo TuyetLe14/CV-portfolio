@@ -4,7 +4,7 @@ import os
 from data import PROJECTS, PERSONAL_PROJECTS 
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
-app.config['DEBUG'] = True  # Bật debug mode để dễ debug
+app.config['DEBUG'] = True 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SECRET_KEY'] = os.urandom(24)
 
