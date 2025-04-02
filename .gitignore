@@ -1,3 +1,4 @@
 #library py
 .venv/
 __pycache__/
+.vercel

@@ -4,7 +4,7 @@ import os
 from data import PROJECTS, PERSONAL_PROJECTS 
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False  # Tắt debug mode khi deploy
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SECRET_KEY'] = os.urandom(24)
 
@@ -28,6 +28,10 @@ def home():
     except Exception as e:
         return f"Error rendering template: {str(e)}", 500
 
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204
+
 @app.route('/api/projects')
 def api_projects():
     token = request.args.get('token')
@@ -36,4 +40,5 @@ def api_projects():
     return jsonify({"projects": PROJECTS, "personal_projects": PERSONAL_PROJECTS})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, threaded=True)
+    port = int(os.environ.get('PORT', 5000))  # Vercel sẽ gán PORT động
+    app.run(host='0.0.0.0', port=port, threaded=True)
