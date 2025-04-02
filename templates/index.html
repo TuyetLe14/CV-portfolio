@@ -60,7 +60,7 @@
                             <a href="{{ url_for('static', filename='CV_LeHuynhAnhTuyet-BE.pdf') }}" download="CV.pdf" class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Download My CV</a>
                             <ul class="ul-icons">
                                 <li><a href="https://github.com/TuyetLe14" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
-                                <li><a href="https://twitter.com" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bxl-twitter'></i></a></li>
+                                <!-- <li><a href="https://twitter.com" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bxl-twitter'></i></a></li> -->
                                 <li><a href="https://www.facebook.com/share/1C9wDn63q3/" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class='bx bxl-facebook-circle'></i></a></li>
                             </ul>
                         </div>
@@ -71,13 +71,13 @@
             </div>
         </section>
 
-        <div class="container my-6">
+        <div class="container my-6"> 
             <section class="mb-6" id="about">
                 <h2 class="text-center mb-5 text-4xl fw-bold neon-glow" style="color: var(--primary-color);">OBJECTIVE</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="about-card card-galaxy p-5 text-center">
-                            <p style="color: var(--primary-color);">
+                            <p>
                                 A motivated UIT graduate aiming to contribute as a Fresher Backend Developer at TMA, leveraging my
                                 skills in Python, Flask,..to develop and test high-quality software solutions.
                             </p>
@@ -94,9 +94,9 @@
                         <div class="project-card card-galaxy">
                             <!-- <img src="{{ project.image }}" alt="{{ project.title }}" class="project-img" loading="lazy"> -->
                             <div class="card-body p-4">
-                                <h3 class="card-title text-2xl neon-glow" style="color: var(--primary-color);">{{ project.title }}</h3>
-                                <p class="card-text mt-3 text-muted" style="color: var(--primary-color); opacity: 0.8;">{{ project.description }}</p>
-                                <p class="card-text mt-2"><i class="fas fa-tools"></i> {{ project.tools }}</p>
+                                <h3 class="card-title text-2xl neon-glow">{{ project.title }}</h3>
+                                <p class="description-text mt-3">{{ project.description }}</p>
+                                <p class="card-text mt-2"><i class="fas fa-tools"></i> {{ project.tools }}</p> 
                                 <p class="mt-2 text-success" style="color: #28a745;"><i class="fas fa-trophy"></i> {{ project.achievement }}</p>
                             </div>
                         </div>
@@ -111,10 +111,10 @@
                     {% for project in personal_projects %}
                     <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="{{ loop.index * 100 }}">
                         <div class="project-card card-galaxy">
-                            <img src="{{ project.image }}" alt="{{ project.title }}" class="project-img" loading="lazy">
+                            <!-- <img src="{{ project.image }}" alt="{{ project.title }}" class="project-img" loading="lazy"> -->
                             <div class="card-body p-4">
-                                <h3 class="card-title text-2xl neon-glow" style="color: var(--primary-color);">{{ project.title }}</h3>
-                                <p class="card-text mt-3 text-muted" style="color: var(--primary-color); opacity: 0.8;">{{ project.description }}</p>
+                                <h3 class="card-title text-2xl neon-glow">{{ project.title }}</h3>
+                                <p class="description-text mt-3">{{ project.description }}</p>
                                 <p class="card-text mt-2"><i class="fas fa-tools"></i> {{ project.tools }}</p>
                                 <p class="mt-2 text-success" style="color: #28a745;"><i class="fas fa-trophy"></i> {{ project.achievement }}</p>
                             </div>
@@ -131,19 +131,19 @@
                         <div class="skill-card card-galaxy p-5 text-center">
                             <div class="row">
                                 <div class="col-4">
-                                    <h4 class="neon-glow" style="color: var(--primary-color);">Programming</h4>
+                                    <h4 class="neon-glow">Programming</h4>
                                     <p class="mt-2" style="color: var(--primary-color);">Python (Flask, OpenCV, TensorFlow), Java, C#</p>
                                 </div>
                                 <div class="col-4">
-                                    <h4 class="neon-glow" style="color: var(--primary-color);">Tools</h4>
+                                    <h4 class="neon-glow">Tools</h4>
                                     <p class="mt-2" style="color: var(--primary-color);">Visual Studio Code,Annaconda, Postman, Jira, Selenium, JMeter, Git,...</p>
                                 </div>
                                 <div class="col-4">
-                                    <h4 class="neon-glow" style="color: var(--primary-color);">Frameworks</h4>
+                                    <h4 class="neon-glow">Frameworks</h4>
                                     <p class="mt-2" style="color: var(--primary-color);">Flask, Angular, ASP.NET, RESTul API, Deep Learning, Testing (Selenium, Jmeter)</p>
                                 </div>
                                 <div class="col-4">
-                                    <h4 class="neon-glow" style="color: var(--primary-color);">Others</h4>
+                                    <h4 class="neon-glow">Others</h4>
                                     <p class="mt-2" style="color: var(--primary-color);">Technical English (reading proficiency)
                                         Server, SVN, Eclipse Flask, Angular, Node.js, ASP.NET</p>
                                 </div>
@@ -158,8 +158,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="certification-card card-galaxy p-5 text-center">
-                            <h3 class="neon-glow" style="color: var(--primary-color);">My Certifications</h3>
-                            <ul class="list-unstyled mt-4" style="color: var(--primary-color);">
+                            <h3 class="neon-glow">My Certifications</h3>
+                            <ul class="list-unstyled mt-4">
                                 <li class="mb-2"><i class="fas fa-certificate"></i> Automation Testing (Testing Vietnam, 11/2022)</li>
                                 <li class="mb-2"><i class="fas fa-certificate"></i> Jira Fundamentals (Atlassian, 10/2022)</li>
                                 <li><i class="fas fa-certificate"></i> Fresher Tester (Testing Vietnam, 05/2022 - 07/2022)</li>
@@ -172,11 +172,11 @@
 
         <footer class="footer-galaxy">
             <p class="mb-3" style="color: var(--primary-color);">© {{ year }} {{ name }}. All rights reserved.</p>
-            <div class="social-icons">
+            <!-- <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+            </div> -->
         </footer>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

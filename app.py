@@ -17,12 +17,12 @@ def home():
                               personal_projects=PERSONAL_PROJECTS, 
                               name="Le Huynh Anh Tuyet",
                               year=datetime.now().year,
-                              degree="Very Good (GPA > 8.1/10)",
+                              degree="Very Good (GPA : 3.13 / 4)",
                               education="University of Information Technology, HCM City (UIT)",
                               major="Information Technology",
                               dob="14/10/2000",
                               phone="0817493884",
-                              email="tgdd.ld9941@gmail.com",
+                              email="lehuynhanh.tuyet10@gmail.com",
                               address="Ho Chi Minh, Vietnam",
                               is_mobile=is_mobile)
     except Exception as e:
