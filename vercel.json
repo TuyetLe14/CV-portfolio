@@ -5,7 +5,11 @@
       "src": "app.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.9"
+        "runtime": "python3.9",
+        "maxLambdaSize": "15mb",
+        "installCommand": "pip install -r requirements.txt",
+        "buildCommand": null,
+        "outputDirectory": null
       }
     }
   ],

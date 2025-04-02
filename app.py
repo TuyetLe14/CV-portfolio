@@ -4,7 +4,7 @@ import os
 from data import PROJECTS, PERSONAL_PROJECTS 
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
-app.config['DEBUG'] = False  # Tắt debug mode khi deploy
+app.config['DEBUG'] = False 
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['SECRET_KEY'] = os.urandom(24)
 
@@ -40,5 +40,5 @@ def api_projects():
     return jsonify({"projects": PROJECTS, "personal_projects": PERSONAL_PROJECTS})
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Vercel sẽ gán PORT động
+    port = int(os.environ.get('PORT', 5000)) 
     app.run(host='0.0.0.0', port=port, threaded=True)
