@@ -36,7 +36,7 @@ PROJECTS = [
     },
     {
         "title": "VeSiMang’s Website (https://vesimang.org/)",
-        "description": "Developed and maintained the company website using C# and ASP.NET MVC, focusing on cybersecurity solutions. (12/2022 - 06/2023).",
+        "description": "Developed and maintained the company website using C# and ASP.NET MVC, focusing on cybersecurity solutions during internship at Data Design Vietnam (12/2022 - 06/2023).",
         "tools": "C#, ASP.NET ",
         "image": "https://via.placeholder.com/300x200?text=OrangeHRM",
         "achievement": "Delivered a user-friendly and secure website, aligning with the company’s mission to 'Protect Together' and enhancing its professional online presence."
