@@ -147,7 +147,7 @@ body.light-theme {
 }
 
 body.light-theme nav {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); 
   border-bottom: 1px solid rgba(218, 165, 32, 0.5);
 }
 
@@ -174,10 +174,18 @@ body.light-theme .btn-nav {
   border-color: #333333;
 }
 
+body.light-theme .btn-nav i {
+  color: #333333; 
+}
+
 body.light-theme .btn:hover,
 body.light-theme .btn-nav:hover {
   background: #333333;
   color: #FFFFFF;
+}
+
+body.light-theme .btn-nav:hover i {
+  color: #FFFFFF; 
 }
 
 .hero {
@@ -302,7 +310,6 @@ body.light-theme .ul-icons li a {
   -webkit-mask-image: radial-gradient(circle, white 2%, rgba(0, 0, 0, 0.99) 40%, transparent 100%);
 }
 
-
 body.light-theme .hero-img img {
   filter: brightness(1) contrast(1); 
   mask-image: none;
@@ -314,7 +321,6 @@ body.light-theme .hero-img img {
   transform: none;
   box-shadow: none;
 }
-
 
 .container {
   padding: 50px 60px;
@@ -555,58 +561,32 @@ body.light-theme .social-icons a {
   text-shadow: 0 0 5px rgba(218, 165, 32, 0.5);
 }
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  nav ul {
-    margin-top: 15px;
-    gap: 20px;
-  }
-
-  nav ul li {
-    margin: 0 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .hero-info {
-    max-width: 100%;
-  }
-
-  .hero-img {
-    max-width: 60%; 
-    margin-top: 20px;
-    align-self: center; 
-  }
-
-  .hero-info h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-info h2 {
-    font-size: 1.8rem;
-  }
-
-  .container {
-    padding: 20px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .nav-controls {
-    margin-top: 15px;
-  }
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 2px solid #DAA520;
+  color: #DAA520;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.hamburger:hover {
+  background: #DAA520;
+  color: #000000;
+}
+
+body.light-theme .hamburger {
+  border-color: #333333;
+  color: #333333;
+}
+
+body.light-theme .hamburger:hover {
+  background: #333333;
+  color: #FFFFFF;
+}
 
 .dropdown {
   position: relative;
@@ -674,3 +654,132 @@ body.light-theme .dropdown-content a:hover {
   background-color: rgba(218, 165, 32, 0.3);
 }
 
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  nav h1 {
+    font-size: 1.8rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+    z-index: 3;
+    animation: slideIn 0.3s ease-in-out;
+  }
+
+  body.light-theme .nav-menu {
+    background: rgba(255, 255, 255, 0.95); 
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: block;
+  }
+
+  body.light-theme .nav-menu li a {
+    color: #333333; 
+    background: rgba(218, 165, 32, 0.05);
+  }
+
+  body.light-theme .nav-menu li a:hover,
+  body.light-theme .nav-menu li a.active {
+    color: #FFFFFF;
+    background: rgba(218, 165, 32, 0.3);
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    min-width: 100%;
+    background: rgba(20, 20, 20, 0.9);
+  }
+
+  body.light-theme .dropdown-content {
+    background: rgba(220, 220, 220, 0.9);
+  }
+
+  .dropdown-content a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .nav-controls {
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  .btn-nav {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-info {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    max-width: 60%;
+    margin-top: 20px;
+    align-self: center;
+  }
+
+  .hero-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
