@@ -17,7 +17,7 @@ def home():
                               personal_projects=PERSONAL_PROJECTS, 
                               name="Le Huynh Anh Tuyet",
                               year=datetime.now().year,
-                              degree="Very Good (GPA : 3.13 / 4)",
+                              degree="Very Good (GPA : 8.13 / 10)",
                               education="University of Information Technology, HCM City (UIT)",
                               major="Information Technology",
                               dob="14/10/2000",
