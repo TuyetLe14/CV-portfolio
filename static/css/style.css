@@ -466,10 +466,14 @@ body.light-theme .skill-card h4 {
 .skill-card p {
   font-size: 1rem;
   color: #DAA520;
+  line-height: 1.5; 
+  margin-bottom: 10px;
 }
 
 body.light-theme .skill-card p {
   color: #333333;
+  line-height: 1.5; 
+  margin-bottom: 10px;
 }
 
 .certification-card {
